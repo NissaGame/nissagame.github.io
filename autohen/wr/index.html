@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>PS3Xploit - Flash Writer</title>
+<script>
+	var ua = navigator.userAgent;
+	var uaStringCheck = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
+	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+	switch (uaStringCheck) {
+		case "PLAYSTATION":
+			switch (fwVersion) {
+				case "4.82":
+					window.location="482/index.html";
+					break;
+				case "4.84":
+					window.location="484/index.html";
+					break;
+				case "4.85":
+					window.location="485/index.html";
+					break;
+				case "4.90":
+					window.location="490/index.html";
+					break;
+				case "4.91":
+					window.location="491/index.html";
+					break;
+				case "4.93":
+					window.location="493/index.html";
+					break;
+				default:
+					alert('Your PS3 is not on FW 4.82, 4.84, 4.85, 4.90, 4.91 or 4.93! Your current running FW version is ' + fwVersion + ', which is not compatible with PS3Xploit Flash Writer.');
+					window.close();
+					break;
+			}
+			break;
+		default:
+			alert('You are not on a PlayStation 3 System! Open PS3Xploit - Flash Writer from PS3 Internet Browser.');
+			window.close();
+			break;
+	}
+</script>
+<noscript>
+<center>
+<h1><br><br><br><br><br><br><br><H1>
+<H2>This tool requires JavaScript enabled.</H2>
+</center>
+</noscript>
+</body>
+</html>
